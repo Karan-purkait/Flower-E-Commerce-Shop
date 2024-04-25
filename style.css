@@ -116,12 +116,15 @@ header .fa-bars {
     html {
         font-size: 55%;
     }
+
     header {
         padding: 2rem;
     }
+
     section {
         padding: 2rem;
     }
+
     .home {
         background-position: left;
     }
@@ -131,6 +134,7 @@ header .fa-bars {
     header .fa-bars {
         display: block;
     }
+
     header .navbar {
         position: absolute;
         top: 100%;
@@ -140,9 +144,11 @@ header .fa-bars {
         border-top: 1rem solid rgba(0, 0, 0, 0.1);
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
+
     header #toggler:checked~.navbar {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
+
     header .navbar {
         margin: 1.5rem;
         padding: 1.5rem;
@@ -150,9 +156,11 @@ header .fa-bars {
         border-top: 1rem solid rgba(0, 0, 0, 0.1);
         display: block;
     }
+
     .home .content h3 {
         font-size: 5rem;
     }
+
     .home .content span {
         font-size: 2.5rem;
     }
@@ -162,6 +170,7 @@ header .fa-bars {
     html {
         font-size: 50%;
     }
+
     header {
         padding: 2rem;
     }
@@ -257,29 +266,8 @@ header .fa-bars {
     padding-top: 1rem;
     line-height: 1.5;
     padding-left: 15rem;
-} 
+}
+
 .about .row .Learn-more {
     padding-left: 15rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

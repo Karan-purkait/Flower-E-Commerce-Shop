@@ -1,6 +1,6 @@
 # Blossom Bazar
 
-Welcome to the Flower E-Commerce Shop ,Blossom Bazar, a beautiful online store where you can browse and purchase a wide variety of fresh flowers and floral arrangements. This project is a frontend web development endeavor, built using HTML, CSS, and JavaScript.
+Welcome to the Flower E-Commerce Shop ,Blossom Bazar, a beautiful online store where you can browse and purchase a wide variety of fresh flowers and floral arrangements. This project is a frontend web development endeavor, built using HTML , CSS , and JavaScript.
 
 ## Features
 

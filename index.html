@@ -1,67 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blossom Bazaar</title>
-    <link rel="icon" href="./Images/leaf.png">
+    <title>Blossom Bazaar | Premium Florals</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
+    <div class="scroll-indicator"></div>
+
     <header>
-        <input type="checkbox" name="" id="toggler">
+        <input type="checkbox" id="toggler">
         <label for="toggler" class="fas fa-bars"></label>
+        
         <a href="#" class="logo">Blossom<span>Bazaar</span></a>
+
         <nav class="navbar">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#products">Products</a>
-            <a href="#review">Review</a>
             <a href="#contact">Contact</a>
         </nav>
+
         <div class="icons">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-shopping-cart"></a>
-            <a href="#" class="fas fa-user"></a>
+            <a href="javascript:void(0)" class="fas fa-search" id="search-btn"></a>
+            <a href="javascript:void(0)" class="fas fa-shopping-cart" id="cart-btn"><span id="cart-count">0</span></a>
+            <a href="javascript:void(0)" class="fas fa-user"></a>
+        </div>
+
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="Search flowers...">
+            <label for="search-box" class="fas fa-search"></label>
         </div>
     </header>
 
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your <span>Cart</span></h2>
+            <i class="fas fa-times" id="close-cart"></i>
+        </div>
+        <div id="cart-items-container">
+            <p class="empty-msg">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total">Total: $<span id="total-price">0.00</span></div>
+            <button class="btn checkout-btn">Checkout Now</button>
+        </div>
+    </div>
+
     <section class="home" id="home">
-        <div class="content">
-            <h3>Fresh Flower</h3>
-            <span>natural and beautiful flowers</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo non, autem eligendi vel sunt accusantium
-                quidem. Accusamus corrupti labore unde, repudiandae ipsum, aperiam veritatis vero maxime mollitia
-                recusandae provident animi.</p>
-            <a href="#" class="btn">Shop now</a>
+        <div class="content reveal">
+            <h3>Pure Elegance</h3>
+            <span>Hand-Picked Floral Art</span>
+            <p>Experience the luxury of premium blooms delivered within hours. Freshness guaranteed with every petal.</p>
+            <a href="#products" class="btn">Shop Collection</a>
         </div>
     </section>
 
-    <section class="about" id="about">
-        <h1 class="heading"><span>About</span> us </h1>
+    <section class="products" id="products">
+        <h1 class="heading">Our <span>Signature</span> Products</h1>
+        <div class="box-container">
+            <div class="box reveal">
+                <span class="badge">Hot</span>
+                <div class="image">
+                    <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?w=500" alt="Tulips">
+                    <div class="overlay-icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-share"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <button class="add-to-cart-btn add-to-cart" data-name="Pink Tulips" data-price="15.99">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+                <div class="content">
+                    <h3>Pink Tulips</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">$15.99 <span>$22.00</span></div>
+                </div>
+            </div>
+
+            <div class="box reveal">
+                <span class="badge">-25%</span>
+                <div class="image">
+                    <img src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?w=500" alt="Roses">
+                    <div class="overlay-icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-share"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <button class="add-to-cart-btn add-to-cart" data-name="Crimson Roses" data-price="24.99">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+                <div class="content">
+                    <h3>Crimson Roses</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">$24.99 <span>$35.00</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h1 class="heading"><span>Contact</span> Us</h1>
         <div class="row">
-            <div class="video-container">
-                <video src="Images/about-c:\Users\Karan Purkait\Downloads\1689821-hd_1920_1080_24fps.mp4" loop autoplay muted></video>
-                <h3>Best flower sellers</h3>
+            <div class="contact-info reveal">
+                <div class="info-box">
+                    <i class="fas fa-envelope"></i>
+                    <div class="details">
+                        <h3>Email</h3>
+                        <p>hello@blossombazaar.com</p>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <i class="fas fa-phone"></i>
+                    <div class="details">
+                        <h3>Phone</h3>
+                        <p>+123-456-7890</p>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="details">
+                        <h3>Location</h3>
+                        <p>123 Floral Lane, Bloom City</p>
+                    </div>
+                </div>
             </div>
-            <div class="content">
-                <h3>Why choose us?</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis similique reiciendis
-                    perspiciatis praesentium sint quibusdam a, rem quod deserunt itaque expedita laudantium tempore eaque
-                    quidem sequi. Error doloremque possimus maxime.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed pariatur amet eius libero sunt animi
-                    dicta nulla doloremque fuga dolor. Vel molestias libero at. Exercitationem iste officia natus earum
-                    culpa.</p>
-                <a href="#" class="btn">Learn more</a>
-            </div>
+
+            <form id="contact-form" class="reveal">
+                <div class="inputBox">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <input type="text" placeholder="Subject">
+                <textarea placeholder="Your Message" cols="30" rows="10" required></textarea>
+                <button type="submit" class="btn">Send Message <i class="fas fa-paper-plane"></i></button>
+            </form>
         </div>
     </section>
 
     <script src="script.js"></script>
 </body>
-
 </html>
-
